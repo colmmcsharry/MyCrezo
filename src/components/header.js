@@ -42,7 +42,7 @@ const Header = ({ siteTitle }) => {
       </Link>
 </div>      
 <div className="headermenu">
-<div className="on-wide">this will be the wide version</div>
+<div className="on-wide">this will be the wide version lol</div>
 <div className="on-narrow">burg</div>
 </div>      
         
