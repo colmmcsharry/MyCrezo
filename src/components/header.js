@@ -1,33 +1,55 @@
-import { Link } from "gatsby"
+import { useStaticQuery, Link, graphql } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import Img from 'gatsby-image'
+import logo from '../images/crezo-logo.png'
+import facility from '../images/facility.jpg'
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle }) => {
+
+//  const data = useStaticQuery(graphql`
+//  query{
+//   file(relativePath: {eq: "crezo-logo.png"}) {
+//     childImageSharp {
+//       fixed(width: 200) {
+//         ...GatsbyImageSharpFixed
+//       }
+//     }
+//   }   
+// }
+// `)
+
+  return (
+
   <header
     style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
+      display:`flex`,
+      justifyContent:`center`,
+      alignItems:`center`,
+      backgroundColor: `rgba(0,0,0,.5)`,
+      opacity:`0.2`,
+      height: `10vh`,
     }}
   >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
+<div className="logo">
+  <Link to="/">
+
+  <img src={logo}/>
+ {/*
+    <Img fixed={data.file.childImageSharp.fixed}
+      alt="crezo logo pic" />
+      */}
+      </Link>
+</div>      
+<div className="headermenu">
+<div className="on-wide">this will be the wide version</div>
+<div className="on-narrow">burg</div>
+</div>      
+        
+         
+        
+      
+      
   </header>
 )
 
@@ -39,4 +61,8 @@ Header.defaultProps = {
   siteTitle: ``,
 }
 
+}
+
 export default Header
+
+

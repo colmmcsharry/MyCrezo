@@ -16,7 +16,7 @@ import Img from "gatsby-image"
 const Image = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
+      placeholderImage: file(relativePath: { eq: "Vancouver.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
@@ -30,3 +30,9 @@ const Image = () => {
 }
 
 export default Image
+
+
+
+/*im keeping this component for reference purposes only, not going to use it. going to follow designer who codes tutorial instead*/
+
+/*you could use this if it was going to be a reusable component, such as a header image that you want in multiple pages*/
